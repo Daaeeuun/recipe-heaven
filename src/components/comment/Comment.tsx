@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import WriteComment from './WriteComment'
-import { Tempcomment } from '../../fetch/APIResponsesTypes'
+import { Comment } from '../../fetch/APIResponsesTypes'
 import { useQuery } from '@tanstack/react-query'
 import fetchTestComment from '../../fetch/fetchMyComment'
 import CommentItem from './CommentItem'
