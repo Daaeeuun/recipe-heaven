@@ -4,7 +4,6 @@ import { TempRecipe } from './APIResponsesTypes'
 
 const fetchTestComment: QueryFunction<TempRecipe[]> = async ({ queryKey }) => {
   // NOTE 유저아이디 스토어에서 가져오기
-
   try {
     const apiRes = await axios.get(
       //`https://jsonplaceholder.typicode.com/comments?_limit=10`,

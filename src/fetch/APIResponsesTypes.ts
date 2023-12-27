@@ -4,7 +4,15 @@ export interface Recipe {
   // 레시피 상세
   id: string
 }
-
+export interface TempComment {
+  userId: string
+  reviewId: number
+  star: number
+  comment: string
+  createdAt: Date
+  updatedAt: Date
+  deletedAt: null
+}
 export interface Comment {
   reviewId: number
   star: number
