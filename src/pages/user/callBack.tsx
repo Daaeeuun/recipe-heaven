@@ -14,18 +14,26 @@ const Callback = () => {
   useEffect(() => {
     const sendAuthorizationCodeToServer = async (code: string) => {
       try {
-        const response = await axios.post(
-          'http://localhost:3000/auth/login/kakao',
+          const response = await axios.post(
+          'https://kauth.kakao.com/oauth/token',
           {
+            grant_type: 'authorization_code',
+            client_id: 'f0f5c0502b3bb5ec7080c7b64a6d18ce',
+            redirect_uri: `http://localhost:5173/oauth`,
             code,
-            domain,
+          },
+          {
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8',
+            },
           },
         )
+
         console.log('after backend response: ', response.data)
         console.log('after backend response: ', response)
         // 토큰 스토어에서 받은 토큰 설정
-        setAccessToken(response.data.accessToken);
-        console.log('토큰:', response.data.accessToken);
+        setAccessToken(response.data.access_token)
+        console.log('토큰:', response.data.access_token)
         navigate('/')
       } catch (error) {
         console.error(
@@ -56,7 +64,7 @@ const Callback = () => {
   )
 }
 
-export default Callback
+export default Callback;
 
 
 // import React, { useEffect } from 'react';
