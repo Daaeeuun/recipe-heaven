@@ -22,10 +22,10 @@ const Callback = () => {
           },
         )
         console.log('after backend response: ', response.data)
+        console.log('after backend response: ', response)
         // 토큰 스토어에서 받은 토큰 설정
         setAccessToken(response.data.accessToken);
-        () => {
-          toast.success('회원 가입에 성공했습니다!')}
+        console.log('토큰:', response.data.accessToken);
         navigate('/')
       } catch (error) {
         console.error(
