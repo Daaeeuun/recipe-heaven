@@ -1,10 +1,5 @@
 import React from 'react'
 
-// type DetailMainProps = {
-//   explaincontentList: string[]
-//   sequenceImgList: string[]
-// }
-
 function DetailMain({ explaincontentList, sequenceImgList }) {
   console.log('sequenceImgList', sequenceImgList)
   return (
@@ -27,13 +22,11 @@ function DetailMain({ explaincontentList, sequenceImgList }) {
   )
 }
 
-// type FoodMakingListProps = {
-//   sequenseImgUrl: string
-//   explainText: string
-//   index: number
-// }
-
-function FoodMakingList({ sequenseImgUrl, explainText, index }) {
+function FoodMakingList({
+  sequenseImgUrl,
+  explainText,
+  index,
+}) {
   console.log('sequenseImgUrl', sequenseImgUrl)
   return (
     <>
