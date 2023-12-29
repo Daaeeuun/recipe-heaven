@@ -33,11 +33,7 @@ function DetailMain({ explaincontentList, sequenceImgList }) {
 //   index: number
 // }
 
-function FoodMakingList({
-  sequenseImgUrl,
-  explainText,
-  index,
-}) {
+function FoodMakingList({ sequenseImgUrl, explainText, index }) {
   console.log('sequenseImgUrl', sequenseImgUrl)
   return (
     <>

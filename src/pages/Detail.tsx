@@ -87,7 +87,7 @@ function Detail() {
   }
 
   // const { recipeId } = useParams<{ recipeId: string }>()
-    const { recipeId } = useParams()
+  const { recipeId } = useParams()
 
   useEffect(() => {
     console.log('recipeId', recipeId)
